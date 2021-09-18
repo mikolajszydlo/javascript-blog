@@ -81,6 +81,10 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  a {
+    padding-right: 5px;
+    word-wrap: normal;
+  }
 
   .active {
     font-weight: bold;
@@ -93,6 +97,32 @@ body {
   }
 }
 
+.tag-size-
+
+.tag-size-5 {
+  display: inline-block;
+  font-size: 150%;
+}
+
+.tag-size-4 {
+  display: inline-block;
+  font-size: 140%;
+}
+
+.tag-size-3 {
+  display: inline-block;
+  font-size: 130%;
+}
+
+.tag-size-2 {
+  display: inline-block;
+  font-size: 120%;
+}
+
+.tag-size-1 {
+  display: inline-block;
+  font-size: 100%;
+}
 /* Authors */
 
 .authors {
