@@ -213,8 +213,8 @@
         </section>
         <aside class="sidebar">
           <h2 class="section-title">Tags</h2>
-          <ul class="list tags">
-          </ul>
+          <div class="list tags">
+          </div>
           <h2 class="section-title">Authors</h2>
           <ul class="list authors">
           </ul>
@@ -222,7 +222,32 @@
       </main>
     </div>
   </div>
+
+  <script id="template-article-link" type="text/x-handelbars-template">
+    <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+  </script>
+
+  <script id="template-tags-link" type="text/x-handelbars-template">
+    <li><a href="#tag-{{ tag }}"><span>{{ tag }}</span></a></li>
+  </script>
+
+  <script id="template-author-link" type="text/x-handelbars-template">
+    <a href="#author-{{ author }}"><span>{{ author }}</span></a>
+  </script>
+
+  <script id="template-tags-cloud" type="text/x-handelbars-template">
+    {{#each tags}}
+    <a class="{{ className}}" href="#tag-{{ tag }}">{{ tag }}</a>
+    {{/each}}
+  </script>
+
+  <script id="template-author-list" type="text/x-handelbars-template">
+    {{#each authors}}
+    <li><a href="#author-{{ author }}">{{ author }} ({{ count }})</a></li>
+    {{/each}}
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/script.js"></script>
 </body>
-
 </html>
